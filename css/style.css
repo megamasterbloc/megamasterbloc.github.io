@@ -1,50 +1,36 @@
+/*color palette:
+    main hue: 220°
+    main backgroound color:      rgb(76, 131, 239)
+    secondary background color : rgb(7, 71, 198)
+    main text color:             rgb(255, 255, 255)
+    link text color:             rgb(58, 82, 216)
+*/
 
-
-body {
-    /*background-color: rgb(44, 42, 59);*/
-    /*color: rgb(255, 255, 255);*/
-    text-align: center;
-    background-image: url("/images/background2.png");
-    background-repeat: repeat;
-    background-size: auto;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 h1 {
 
-    color: rgb(255, 255, 255);
-    font-size: 300%;
+   /* color: rgb(255, 255, 255);
+    font-size: 400%;
     /*border:20px solid rgb(65, 62, 104);*/
-    text-decoration: none;
+    /*text-decoration: none; */
     
 } 
 
-h3 {
-
-    /*color: rgb(255, 255, 255);*/
-    font-size: 200%;
-    /*border:20px solid rgb(65, 62, 104);*/
-    
-} 
-
-P {
+p {
     /*color: rgb(207, 67, 67);*/
-    font-family: verdana;
-    font-size: 160%;
+    /*font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;*/
     /*border:10px solid rgb(65, 62, 104);*/
 }
 
 img {
     /*border:20px solid rgb(65, 62, 104);*/
-    width: 60%;
+   /* width: 60%;
     height: 60%;
-    margin-top: 20px; 
-    margin-bottom: 20px;
+    margin-top: 10px; 
+    margin-bottom: 10px;
     margin-left: 20%;
-    margin-right: 20%;
-
+    margin-right: 20%;*/
 }
 
 .div_header {
@@ -52,6 +38,7 @@ img {
     color: rgb(255, 255, 255);
     margin-left: 20%;
     margin-right: 20%;
+    background-color: rgb(76, 131, 239);
 }
 
 .div_header_link {
@@ -62,7 +49,7 @@ img {
 
 .div_main {
 
-   color: rgb(255, 255, 255); 
+   /*color: rgb(255, 255, 255);*/ 
 
 }
 
@@ -73,10 +60,120 @@ img {
     margin-right: 20%;
     margin-bottom: 5%;
     text-align: justify;
- }
- 
- .div_main_link {
+}
 
-    color: rgb(58, 82, 216); 
+ /*.div_footer {
+    color: rgb(255, 255, 255);
+    margin-left: 0%;
+    margin-right: 0%;
     text-decoration: none;
- }
+    background-color: rgb(76, 131, 239);
+    border-top: 2%;
+    border-bottom: 2%;
+    border-left: 0%;
+    border-right: 0%;
+}    */
+
+.div_footer_link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}    
+
+.list_header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 28px;
+}
+
+/* new css style */
+
+h1 {
+    font-size: 300%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+h3 {font-size: 150%;}
+
+p {font-size: 150%;}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.nolink {text-decoration: none;}
+
+.link_wh:hover {color: rgb(255, 255, 255);}
+
+.nolist {list-style-type: none;}
+
+.list_il {display: inline;}
+
+.font {font-family: Arial, Helvetica, sans-serif;}
+
+.c_white {color: rgb(255, 255, 255);}
+
+.c_blue {color: rgb(58, 82, 216);}
+
+.fs_main {font-size: 150%;}
+
+.fs_big {font-size: 400%;}
+
+.center {text-align: center;}
+
+.justify {text-align: justify;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+.header {
+    color: rgb(255, 255, 255);
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 20%;
+    margin-right:20%;
+    background-color: rgb(76, 131, 239);
+
+}
+
+
+.footer {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(76, 131, 239);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.background {
+    background-image: url("/images/background2.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.img {
+    width: 60%;
+    height: 60%;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.li_el {
+    padding-left: 10px;
+    padding-right: 10px;
+}
