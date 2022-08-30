@@ -75,8 +75,8 @@ img {
 }    */
 
 .div_footer_link {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    /*color: rgb(255, 255, 255);
+    text-decoration: none;*/
 }    
 
 .list_header {
@@ -111,7 +111,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .nolist {list-style-type: none;}
 
-.list_il {display: inline;}
+.dp_il {display: inline;}
+
+.dp_ilb {display: inline-block; height: 28px;}
 
 .font {font-family: Arial, Helvetica, sans-serif;}
 
@@ -135,21 +137,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
     color: rgb(255, 255, 255);
     padding-left: 0%;
     padding-right: 0%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-left: 20%;
     margin-right:20%;
     background-color: rgb(76, 131, 239);
 }
 
 .footer {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
     background-color: rgb(76, 131, 239);
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -171,7 +171,34 @@ body {font-family: Arial, Helvetica, sans-serif;}
     margin-right: 20%;
 }
 
+.social_background {
+    background-image:linear-gradient(0deg,#042147 2%,#846cee 108%);
+    width: 100%;
+    height: 100vh;
+}
+
 .li_el {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px 20px;
+}
+
+.social_box {
+    border: 5px solid #509cff;
+    border-radius: 5px;
+    padding: 20px 50px;
+    margin: 10px 10px;
+    background-color: #509cff;
+    width: 400px;
+    color: #fff;
+}
+
+
+
+.social_box:hover {
+    border: 5px solid #fff ;
+    border-radius: 5px;
+    padding: 20px 50px;
+    margin: 10px 10px;
+    background-color: #fff;
+    width: 400px;
+    color: #509cff;
 }
