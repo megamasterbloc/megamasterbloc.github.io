@@ -26,25 +26,33 @@
         <a href="/images/HWU-MAX.png" target="_blank"><img src="/images/HWU_mini.png" alt="HWU logo" class="img"></a>
         <div class="div_main_text">
             <p>
-            this is a render of the obsidian logo of <a href="https://discord.com/invite/highways" target="_blank" class="nolink c_blue">HWU</a> (Highway Workers Union) on the server 2b2t. The render is over 100K chunks large and the resolution is 1:1, meaning that each pixel of the render represent a single bloc from the world. It is an isometric render with the max Y height at 121, you can actually see that near the highways since the rails are at y=121 while the floor is at y=120, thus not rendering the rails.
+            this is a render of the obsidian logo of <a href="https://discord.com/invite/highways" target="_blank" class="nolink c_blue fs_bold">HWU</a> (Highway Workers Union) on the server 2b2t. The render is over 100K chunks large and the resolution is 1:1, meaning that each pixel of the render represent a single bloc from the world. It is an isometric render with the max Y height at 121, you can actually see that near the highways since the rails are at y=121 while the floor is at y=120, thus not rendering the rails.
             </p>
         </div>
-        <div class="div_main">
-            <h3 class="center c_white">test render</h3>
-            <a href="/images/main.png" target="_blank"><img src="/images/main.png" alt="test scene" class="img"></a>
-            <div class="div_main_text">
-                <p>
-                    This is a demonstration render that use most of the functionality of <a href="https://chunky-dev.github.io/docs/" target="_blank" class="nolink c_blue" >Chunky</a>, the rendering software that I use. It is based on a test map and I have added a custom player model, including a custom skin. All of the features worked properly, for example the in-camera blur or the equirectangular projection mode.
-                </p>
-            </div>
-            <div class="div_main">
-                <h3 class="center c_white">Holycube season 5</h3>
-                <a href="/images/h5_lite.jpg" target="_blank"><img src="/images/h5_lite.jpg" alt="medieval city" class="img"></a>
-                <div class="div_main_text">
-                    <p>
-                        This is a render from a medieval town on the <a href="https://www.holycube.fr/" target="_blank" class="nolink c_blue link_wh">holycube</a> server season 5. it was originaly made in 16k but had to be resized to 4k due to it's enormous size. The blurred background and foreground turned out to be very pretty and the very high ray count made it nearly noiseless.
-                    </p>
-                </div>
+        <!--<div class="div_main"-->
+        <h3 class="center c_white">Test render</h3>
+        <a href="/images/main.png" target="_blank"><img src="/images/main.png" alt="test scene" class="img"></a>
+        <div class="div_main_text">
+            <p>
+                This is a demonstration render that use most of the functionality of <a href="https://chunky-dev.github.io/docs/" target="_blank" class="nolink c_blue fs_bold" >Chunky</a>, the rendering software that I use. It is based on a test map and I have added a custom player model, including a custom skin. All of the features worked properly, for example the in-camera blur or the equirectangular projection mode.
+            </p>
+        </div>
+        <!--<div class="div_main">-->
+        <h3 class="center c_white">Holycube season 5</h3>
+        <a href="/images/h5_lite.jpg" target="_blank"><img src="/images/h5_lite.jpg" alt="medieval city" class="img"></a>
+        <div class="div_main_text">
+            <p>
+                This is a render from a medieval town on the <a href="https://www.holycube.fr/" target="_blank" class="nolink c_blue link_wh fs_bold">holycube</a> server season 5. it was originaly made in 16k but had to be resized to 4k due to it's enormous size. The blurred background and foreground turned out to be very pretty and the very high ray count made it nearly noiseless.
+            </p>
+        </div>
+        <h3 class="center c_white">Composite render</h3>
+        <a href="/images/terragen_extra_lite.jpg" target="_blank"><img src="/images/terragen_extra_lite.jpg" alt="top down view of a minecraft world" class="img"></a>
+        <div class="div_main_text">
+            <p>
+                One of the limitation of chunky is that it take a lot of RAM to render a large scene, both to load the 3D scene if there are a lot of chunks and to store the actual render when rendering at extremely large sizes. This is a limitation that all 3D softwares have and there have been a lot of optimisations developed specifically to address this issue. However Chunky is still a relatively small software and only a couple of them has been implemented, for example the awesome <a href="https://github.com/aTom3333/chunky-octree-plugin" target="_blank" class="nolink c_blue link_wh fs_bold">octree plugin</a> made by aTom3333. To bypass this limitation I am currently experimenting with a technique called <a href="https://en.wikipedia.org/wiki/Tiled_rendering" target="_blank" class="nolink c_blue link_wh fs_bold">tiled rendering</a> which consist of rendering only small portions of the final render at once. For my first attempt I've divided my final render into 4 quadrants and rendered each individually (which still took a lot of RAM), finally I used GIMP to put them together. It worked great for a first attempt but there is a lot of room for improvement, first there are some very visible artefacts at the junctions between the tiles due a lack of padding at the border of each of them, secondly the SPP was too low at 100 SPP (the bottom left one rendered at 16SPP due to another problem) which introduced some noise. It should be noted that the original render is 32768 by 32768 or approximately 1 gigapixel and had a size of 12 GB but it was so large that the only program that could open it was GIMP, it was then reduced to a size of 2048*2048 and is now much smaller.
+            </p>
+        </div>
+    </div>
     <!--footer-->
     <footer>
         <div class="footer center nolist">

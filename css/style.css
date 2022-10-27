@@ -125,6 +125,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .fs_big {font-size: 400%;}
 
+.fs_bold {font-weight: bold;}
+
 .center {text-align: center;}
 
 .justify {text-align: justify;}
@@ -190,8 +192,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 400px;
     color: #fff;
 }
-
-
 
 .social_box:hover {
     border: 5px solid #fff ;
