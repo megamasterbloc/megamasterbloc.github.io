@@ -66,6 +66,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .dp_ilb {display: inline-block; height: 28px;}
 
+.dp_b {display: block; height: 28px;}
+
 .font {font-family: Arial, Helvetica, sans-serif;}
 
 .c_white {color: rgb(255, 255, 255);}
@@ -134,28 +136,42 @@ body {font-family: Arial, Helvetica, sans-serif;}
     height: 100vh;
 }
 
+.social_new_background {
+    aspect-ratio: 960 / 300;
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(/layered-waves-haikei.svg) ;
+}
+
 .li_el {
     padding: 5px 20px;
 }
 
 .li_so  {
-   
+
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
     background-color: #509cff;
     width: 500px;
     border: px solid #509cff;
     border-radius: 5px;
     color: #fff;
     transition: 120ms;
+    cursor: pointer;
 }
 
 .li_so:hover {
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 40px;
     background-color: #fff;
     width: 500px;
