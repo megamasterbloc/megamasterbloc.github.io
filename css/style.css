@@ -52,7 +52,7 @@ h1 {
 
 h3 {font-size: 150%;}
 
-p {font-size: 150%;}
+p {font-size: 130%;}
 
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -61,6 +61,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .link_wh:hover {color: rgb(255, 255, 255);}
 
 .nolist {list-style-type: none;}
+
+.nomargin {margin: 0px;}
+
+.nopadding {padding: 0px;}
 
 .dp_il {display: inline;}
 
@@ -147,6 +151,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
     background-image: url(/layered-waves-haikei.svg) ;
 }
 
+.home_body_background { 
+    background-color: #042147;
+
+}
+
+.home_background { 
+    background-color: #041122;
+
+}
+
 .li_el {
     padding: 5px 20px;
 }
@@ -202,4 +216,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
     color: #509cff;
     transition: 120ms;
 
+}
+
+.home_main_margin {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100vh;
 }

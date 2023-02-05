@@ -16,7 +16,7 @@
                 <li><img src="/images/head.png" alt="head" class="logo left li_el"></li>
                 <li><a href="/social" target="_blank" class="nolink c_white fs_main right li_el">socials</a></li>
                 <li><a href="#" class="nolink c_white fs_main right li_el">home</a></li>
-                <li><a href="index.html" class="nolink c_white fs_main li_el dp_ilb">megamasterbloc&nbsprenders</a></li>
+                <li><a href="/index" class="nolink c_white fs_main li_el dp_ilb">megamasterbloc&nbsprenders</a></li>
             </ul>
         </div>
     </header>
@@ -50,6 +50,28 @@
         <div class="div_main_text">
             <p>
                 One of the limitation of chunky is that it take a lot of RAM to render a large scene, both to load the 3D scene if there are a lot of chunks and to store the actual render when rendering at extremely large sizes. This is a limitation that all 3D softwares have and there have been a lot of optimisations developed specifically to address this issue. However Chunky is still a relatively small software and only a couple of them has been implemented, for example the awesome <a href="https://github.com/aTom3333/chunky-octree-plugin" target="_blank" class="nolink c_blue link_wh fs_bold">octree plugin</a> made by aTom3333. To bypass this limitation I am currently experimenting with a technique called <a href="https://en.wikipedia.org/wiki/Tiled_rendering" target="_blank" class="nolink c_blue link_wh fs_bold">tiled rendering</a> which consist of rendering only small portions of the final render at once. For my first attempt I've divided my final render into 4 quadrants and rendered each individually (which still took a lot of RAM), finally I used GIMP to put them together. It worked great for a first attempt but there is a lot of room for improvement, first there are some very visible artefacts at the junctions between the tiles due a lack of padding at the border of each of them, secondly the SPP was too low at 100 SPP (the bottom left one rendered at 16SPP due to another problem) which introduced some noise. It should be noted that the original render is 32768 by 32768 or approximately 1 gigapixel and had a size of 12 GB but it was so large that the only program that could open it was GIMP, it was then reduced to a size of 2048*2048 and is now much smaller.
+            </p>
+        </div>
+        <h3 class="center c_white">Fives islands</h3>
+        <a href="/images/five_islands.png" target="_blank"><img src="/images/five_islands.png" alt="a big island with boats, towers and a big arch on top of it with a magma ball" class="img"></a>
+        <div class="div_main_text">
+            <p>
+            The fives islands are a groups of player made structures on the minecraft server <a href="https://2b2t.miraheze.org/wiki/Front_Page" target="_blank" class="nolink c_blue link_wh fs_bold">2b2t</a>, the island featured on the render is the biggest island with a lot of details. For more informations on the history of this project you can watch <a href="https://www.youtube.com/watch?v=tilmZfu3tNQ" target="_blank" class="nolink c_blue link_wh fs_bold">the video FastVicent1 made about it</a>.
+            The render itself made heavy use of most of chunky features such as fog, DoF, players rendering and even the new water world mode available in the latest snapshot wich surrounds the loaded chunks with an infinite ocean. Due to that it is one of my renders that would have really benefited from additional rendering time, even after 50 hours of rendering the denoiser still struggle to make a nice image and instead make it looks like an oil paint.
+            </p>
+        </div>
+        <h3 class="center c_white">SkyMasons base</h3>
+        <a href="/images/SkyMasons.png" target="_blank"><img src="/images/SkyMasons.png" alt="a lot of floating islands with various builds on top of them" class="img"></a>
+        <div class="div_main_text">
+            <p>
+            This is a render of the SkyMasons base, an enormous base founded by the <a href="https://2b2t.miraheze.org/wiki/SpawnMasons" target="_blank" class="nolink c_blue link_wh fs_bold">Spawn Masons</a>, a major 2b2t group, and built by various builders thanks to an ingenius proxy system. This allowed the base to survive for a very long without getting leaked because the players that were building couldn't know the true coordinates of the megabse. I made this render shortly after <a href="https://www.youtube.com/watch?v=UsN3qc-Vong" target="_blank" class="nolink c_blue link_wh fs_bold">SalC1 video about the base</a> and how it was founded, due to the size ands the shape of this base it was a good idea to make an isometric render and at the end it turned to be one of the best render I ever made.
+            </p>
+        </div>
+        <h3 class="center c_white">minecraft classic server</h3>
+        <a href="/images/mc_classic.png" target="_blank"><img src="/images/mc_classic.png" alt="a top down view of a minecraft server" class="img"></a>
+        <div class="div_main_text">
+            <p>
+            The oldest memory I have from minecraft is <a href="https://www.deviantart.com/nova225/art/Minecraft-Server-060809-1-132891707" target="_blank" class="nolink c_blue link_wh fs_bold">this screenshot</a>, I don't know were I found it but I know for sure that it is thanks to this screenshot that I eventually started playing minecraft. A few months ago I rediscovered it while watching <a href="https://www.youtube.com/watch?v=8zcTx-oAL6g" target="_blank" class="nolink c_blue link_wh fs_bold">a youtube video</a> wich led me to try to recreate this screenshot in chunky, I even went so far to use a texture pack with the old bloc textures. The world itself is a very old minecraft server from the classic era, the screenshot says version 0.0.23a_01 wich came out in July 11, 2009.
             </p>
         </div>
     </div>
