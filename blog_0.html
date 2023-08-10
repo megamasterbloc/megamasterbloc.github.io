@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to make a secure laptop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body class="nomargin nopadding home_background">
+    <div class="">
+        <header class="header">
+            <ul class="navbar list_header dp_il">
+                <li class="nolist left navbarel"><a href="index.html" class=" nolink c_white li ">Home</a></li>
+                <li class="nolist left navbarel"><a href="Blog.html"class=" nolink c_white">Blog</a></li>
+                <li class="nolist left navbarel"><a href="renders.html" class=" nolink c_white ">Renders</a></li>
+              </ul> 
+              <!--<div class="header">
+                <ul class="list_header center list_il">
+                    <li><a href="/social" target="_blank" class="nolink c_white fs_main right li_el">Home</a></li>
+                    <li><a href="index.html" class="nolink c_white fs_main right li_el">Blog</a></li>
+                    <li><a href="/renders.html" class="nolink c_white fs_main li_el dp_ilb">Renders</a></li>
+                </ul>
+            </div>-->
+        </header>
+        <main class="home_main_margin home_body_background c_white">
+            <br>
+            <br>
+            <h1 class="nomargin home_text_margin nopadding">How to make a secure laptop</h1>
+           <div class="home_text_margin">
+                <p>
+                   revision 0.1 here be dragons
+                </p>
+                <p>
+                    THIS GUIDE IS PROVIDED FOR EDUCATIONAL PURPOSES ONLY. WE ARE NOT RESPONSIBLE FOR ANY MALFUNCTION OR DAMAGES THAT RESULTS FROM THE USE OF THIS GUIDE. ONLY DO THE MANIPULATIONS THAT YOU UNDERSTAND.
+                </p>
+                <p>
+                    future license
+                </p>
+                <h2>OOBE</h2>
+                <p>
+                    While I am going to use the Windows installation provided with my laptop this guide should also work with manually installed windows, in that case some of the steps in this guide may not be necessary. Select your language, region (at the time of writing this there is a language/region called English World which comes with much less bloat, if available you can use it and change the language/region later) and keyboard layout. In the next step the OOBE will try to connect to the internet, however doing that will prevent us from using a local account, open the command prompt using shift + F10 and then run the command <code>oobe\bypassnro</code>, this will restart the computer. Redo the previous OOBE steps and when you arrive at the internet connection section there will be a I don't have internet button, click on it then click on "Continue with limited setup". Use the username of your choice then when prompted to enter a password leave the field blank and click next, this will prevent the security questions to be asked and we will set the paswword later. On the next section I strongly recommend to turn off all telemetry and permissions settings, if you still need one of them I recommend turning them on later, the remaining telemetry will be disabled later.
+                </p>
+                <h2>Debloating Windows</h2>
+                <p>
+                    There are multiples programs that claims to debloat windows 11 for you and I have found that BloatyNosy (https://github.com/builtbybel/BloatyNosy) works really great, I recommend installing it, along with all of the other tools that we are gonna use, on a USB stick as you should no connect to the internet yet. On the first page by default everything is checked, I recommend unchecking  "Disable acrylic Fluent Design effects" under Desktop, as well as the gaming section, then click fix and apply fix. In the remove apps section, click on move all then remove the specific packages you want to keep, then click empty bin (the most important windows packages are hidden, don't remove them unless you know what your are doing). To remove edge open cmd and run the command <code>"C:\Program Files (x86)\Microsoft\Edge\Application*your_version*\Installer\setup.exe" --uninstall --system-level --verbose-logging --force-uninstall</code>. Then create a new registry key under <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge</code> as a DWORD with the string <code>DoNotUpdateToEdgeWithChromium</code>  and the value 1.
+                </p>
+                <h2>Windows Settings</h2>
+                <p>
+                    The setting app in Windows 11 is quite extensive although it can be hard to navigate, I will go section by section to make it easier.<br>
+                    In system :<br>
+                    Nearby Sharing : turn off nearby sharing.<br>
+                    Clipboard : turn off clipboard history.<br>
+                    In Network & internet :<br> 
+                    WiFi or ethernet: click on your network adapter for ethernet or hardware properties for wifi and click the Edit button next to DNS server. Select manual and enable IPv4 and IPv6, populate the fields with the IPs of your DNS and, depending on the DNS, enable DNS over HTTPS with the manual template (do this for all of your network adapters). <br>
+                    There are many, many DNS that you can use, but if you don't like making a choice I'm personally using those :<br>
+                    primary : 185.196.220.241 2a0f:ca80:0:2a4::5:4b32 https://dns.froth.zone/dns-query<br>
+                    secondary : 185.181.61.24 2a03:94e0:1804::1 https://ns4.opennameserver.org/dns-query<br>
+                    WiFi : enable Random hardware addresses.<br>
+                    Mobile hotspot : disable mobile hostspot.<br>
+                    Advanced settings : under advanced sharing settings disable network discovery for public networks. <br>
+                    In app : <br>
+                    Installed apps : remove everything you don't want, especially preisntalled apps.<br>
+                    Advanced app settings : turn off Share across devices, disable Archive apps.<br>
+                    Optional features : uninstall Internet Explorer mode and Windows Media Player Legacy, install the other packages you need.<br>
+                    In account : <br>
+                    Sign-in options : step up a strong password, disable Dynamic lock.<br>
+                    In time and language :<br>
+                    Date and time : open Additional clocks and go to the Internet Time section, then click Change settings and use a server from https://www.ntppool.org/en/.<br>
+                    Language and region : select the proper language and region.<br>
+                    In Privacy and security :<br>
+                    Device encryption : turn off device encryption (we are gonna encrypt the system later).<br>
+                    General : turn off everything.<br>
+                    Speech : turn off everything.<br>
+                    Inking and typing personalisation : turn off everything.<br>
+                    Diagnostic and feedback : turn off everything.<br>
+                    Activity history : turn off everything.<br>
+                    Search permission : turn off everything.<br>
+                </p>
+                <h2>Windows Security</h2>
+                <p>
+                    Virus & threat protection : <br>
+                    disable Cloud-delivered protection and Automatic sample submission, enable Tamper protection, enable Controlled folder access. <br>
+                    App & browser control : <br>
+                    Exploit protection : turn on all features except for image randomisation.<br>
+                    Reputation-based protection : enable everything.<br>
+                    Smart App Control :turn smart app control off.<br>
+                </p>
+                <h2>Windows Defender Firewall</h2>
+                <p>
+                    Click on Windows Defender Firewall Properties, in the IPsec Settings go to the IPsec defaults Customize and set Key exchange and Data protection to Advanced. In the Key exchange Customize windows select Use Diffie-Hellman, add a new entry and select SHA-384 as the integrity algorithm, AES-CBC 256 as the encryption algorithm and Elliptic Curve Diffie-Hellman P-384 in the Key exchange algorithm then click ok, use the arrows to move the newly created option to the top and delete the method that use 3DES as it is outdated and vulnerable. In the Data Protection windows select Require encryption for all connection, in the Data integrity list create a new entry and select ESP as the protocol and AES-GMAC 256 as the algorithm, in the Data integrity and encryption algorithm create a new entry and select ESP as well as AES-GCM 256 for both the encryption and integrity algorithm as required by ESP. Move the two newly created algorithm to the top using the arrows. In the Windows Defender Firewall settings enable dropped packed logging for all profiles
+                </p>
+                <h2>Hardened Firefox</h2>
+                <p>
+                    The Firefox hardening is based mostly on already available guides, I have used https://brainfucksec.github.io/firefox-hardening-guide#firefox-preferences. We're gonna start in the Firefox settings, in the General section disable Recommend extensions and features. In the Home section disable Sponsored shortcuts. In the Search section select duckduckgo as the search engine. In Privacy and Security select Custom tracking protection, then select All cross-site cookies and tracking content in all windows, select always sending do not track, select delete cookies when firefox is closed, disable Ask to save logins, select Always use private browsing mode, disable Block dangerous and deceptive content, enable HTTPS-only mode in all windows, select max protection in DNS over HTTPS and use https://dns.froth.zone/dns-query as the DNS server.<br>
+                    Open about:config and set those specific flags (or create them if they do not already exist) :
+                    browser.newtabpage.activity-stream.feeds.telemetry = false
+                    browser.newtabpage.activity-stream.telemetry = false
+                    browser.newtabpage.activity-stream.feeds.discoverystreamfeed = false
+                    browser.newtabpage.activity-stream.showSponsored = false
+                    browser.newtabpage.activity-stream.showSponsoredTopSites = false
+                    geo.provider.ms-windows-location = false
+                    geo.provider.network.url = "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%"
+                    browser.region.update.enabled = false
+                    extensions.getAddons.showPane = false
+                    extensions.htmlaboutaddons.recommendations.enabled = false
+                    browser.discovery.enabled = false
+                    datareporting.policy.dataSubmissionEnabled = false
+                    datareporting.healthreport.uploadEnabled = false-
+                    toolkit.telemetry.enabled = false [Default: false]
+                    toolkit.telemetry.unified = false
+                    toolkit.telemetry.server = "data:"
+                    toolkit.telemetry.archive.enabled = false
+                    toolkit.telemetry.newProfilePing.enabled = false
+                    toolkit.telemetry.shutdownPingSender.enabled = false
+                    toolkit.telemetry.updatePing.enabled = false
+                    toolkit.telemetry.bhrPing.enabled = false
+                    toolkit.telemetry.firstShutdownPing.enabled = false
+                    toolkit.telemetry.coverage.opt-out = true [HIDDEN PREF]
+                    toolkit.coverage.opt-out = true [HIDDEN PREF]
+                    toolkit.coverage.endpoint.base = ""
+                    browser.ping-centre.telemetry = false
+                    beacon.enabled = false
+                    app.shield.optoutstudies.enabled = false
+                    app.normandy.enabled = false
+                    app.normandy.api_url = ""
+                    breakpad.reportURL = ""
+                    browser.tabs.crashReporting.sendReport = false
+                    captivedetect.canonicalURL = ""
+                    network.captive-portal-service.enabled = false
+                    network.connectivity-service.enabled = false
+                    network.prefetch-next = false
+                    network.dns.disablePrefetch = true
+                    network.predictor.enabled = false
+                    network.http.speculative-parallel-limit = 0
+                    browser.places.speculativeConnect.enabled = false
+                    permissions.manager.defaultsUrl = ""
+                    network.IDN_show_punycode = true
+                    browser.search.suggest.enabled = false
+                    browser.urlbar.trimURLs = false
+                    browser.urlbar.suggest.searches = false
+                    browser.fixup.alternate.enabled = false
+                    browser.formfill.enable = false
+                    extensions.formautofill.addresses.enabled = false
+                    extensions.formautofill.available = "off"
+                    extensions.formautofill.creditCards.available = false
+                    extensions.formautofill.creditCards.enabled = false
+                    browser.urlbar.quicksuggest.scenario = "history"
+                    browser.urlbar.quicksuggest.enabled = false
+                    browser.urlbar.suggest.quicksuggest.nonsponsored = false
+                    browser.urlbar.suggest.quicksuggest.sponsored = false
+                    signon.rememberSignons = false
+                    signon.autofillForms = false
+                    signon.formlessCapture.enabled = false
+                    network.auth.subresource-http-auth-allow = 1
+                    dom.security.https_only_mode = true
+                    browser.xul.error_pages.expert_bad_cert = true
+                    security.tls.enable_0rtt_data = false
+                    security.cert_pinning.enforcement_level = 2
+                    security.remote_settings.crlite_filters.enabled = true
+                    security.pki.crlite_mode = 2
+                    network.http.referer.XOriginPolicy = 2
+                    network.http.referer.XOriginTrimmingPolicy = 2+
+                    privacy.partition.serviceWorkers = true
+                    privacy.partition.always_partition_third_party_non_cookie_storage = true
+                    privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage = true
+                    dom.disable_open_during_load = true
+                    extensions.pocket.enabled = false
+                    privacy.userContext.enabled = true
+                    network.cookie.lifetimePolicy = 2
+                    privacy.sanitize.sanitizeOnShutdown = true
+                    privacy.clearOnShutdown.cache = true
+                    privacy.clearOnShutdown.cookies = true
+                    privacy.clearOnShutdown.formdata = true
+                    privacy.clearOnShutdown.history = true
+                    privacy.clearOnShutdown.offlineApps = true
+                    privacy.clearOnShutdown.sessions = true
+                    privacy.clearOnShutdown.sitesettings = false
+                    privacy.sanitize.timeSpan = 0
+                    network.dns.echconfig.enabled = true
+                    network.dns.use_https_rr_as_altsvc = true
+                    network.security.esni.enabled = true
+                    network.trr.blocklist_cleanup_done    true
+                    network.trr.mode = 3
+                    network.trr.useGET = true
+                    network.trr.confirmation_telemetry_enabled    false
+                    network.trr.uri = "https://mozilla.cloudflare-dns.com/dns-query"
+                    network.trr.enable_when_vpn_detected = true
+                </p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

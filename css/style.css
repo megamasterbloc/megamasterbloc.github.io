@@ -78,6 +78,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .c_blue {color: rgb(58, 82, 216);}
 
+.c_light_blue {color: rgb(137, 155, 255);}
+
 .fs_main {font-size: 150%;}
 
 .fs_big {font-size: 400%;}
@@ -98,13 +100,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .header {
     color: rgb(255, 255, 255);
-    padding-left: 0%;
-    padding-right: 0%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-left: 20%;
-    margin-right:20%;
-    background-color: rgb(76, 131, 239);
+    padding-left: calc(-30px + 10vw);
+    padding-right: calc(-30px + 10vw);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: calc(10px + 10vw);
+    margin-right: calc(10px + 10vw);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px ;
+    background-color: #042147;
+    border-top: 0px;
+    border-bottom: 0px;
 }
 
 .footer {
@@ -224,6 +231,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     margin-top: 0%;
     margin-bottom: 0%;
     height: 100vh;
+    border-radius: 5px;
 }
 
 .home_text_margin {
@@ -241,4 +249,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
     margin-right: 1em;
     padding-left: calc(-30px + 10vw);
     float: left;
+}
+
+.navbar {
+    padding: 15px;
+    text-decoration: none;
+    border: 15px;
+    font-size: 200%;
+}
+
+.navbarel  {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
