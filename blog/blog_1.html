@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The nearly ultimate windows hardening guide</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body class="nomargin nopadding home_background">
+    <header class="header">
+            <ul class="navbar list_header dp_il">
+                <li class="nolist left navbarel"><a href="/index.html" class=" nolink c_white li ">Home</a></li>
+                <li class="nolist left navbarel"><a href="/Blog.html"class=" nolink c_white">Blog</a></li>
+                <li class="nolist left navbarel"><a href="/renders.html" class=" nolink c_white ">Renders</a></li>
+              </ul> 
+    </header>
+    <main class="home_main_margin home_body_background c_white">
+            <br>
+            <br>
+            <h1 class="nomargin home_text_margin nopadding">The nearly ultimate windows hardening guide</h1>
+           <div class="home_text_margin">
+                <p>
+                   revision 0.1 here be dragons
+                </p>
+                <p>
+                    This guide is a compilation of resources found on the internet that aims at increasing the overall security, safety and privacy of a windows 11 computer. The threat model is based on both general and untargeted malware as well as targeted attacks (for example in the case of espionage or censorship), it also aims at protecting the user privacy at all cost and as such may break certain features that allows for telemetry or fingerprinting. It is provided with no guarantee on it's actual effect and I strongly advise that you do your own research before doing anything. Furthermore due to the ever evolving nature of cybersecurity and of the various softwares that you may use this guide or parts of it may be out of date when you read it.
+                <p>
+                <h2>Windows installation and debloating</h2>
+                <p>
+                    Install Windows 11 with a local account : <br>
+                    <a href="https://www.youtube.com/watch?v=EOUcvgqOV-0" target="_blank" class="nolink c_light_blue link_wh fs_bold">Don't give Microsoft what they want...</a> by JayzTwoCents. <br>
+                    Bypass security questions during setup : <br>
+                    <a href="https://www.thewindowsclub.com/skip-security-questions-setting-local-account-windows-10" target="_blank" class="nolink c_light_blue link_wh fs_bold">Remove or skip Security Questions when setting up Local User Account in Windows 11/10</a> By thewindowsclub.<br>
+                    Bloatfree install using english world : <br>
+                    <a href="https://www.youtube.com/watch?v=mZm6mY3I7J4" target="_blank" class="nolink c_light_blue link_wh fs_bold">Debloat Windows 11 Installations With Just 2 Clicks</a> by ThioJoe.<br>
+                    Debloating Windows 11 : <br>
+                    <a href="https://www.youtube.com/watch?v=mZm6mY3I7J4" target="_blank" class="nolink c_light_blue link_wh fs_bold">Windows 11: Debloat and Optimize for Ultimate Performance</a> by TechSocket.<br>
+
+                </p>
+                <h2>General security hardening</h2>
+                <p>
+                    Powershell hardening : <br>
+                    <a href="https://www.youtube.com/watch?v=zW69MisrsWk" target="_blank" class="nolink c_light_blue link_wh fs_bold">Disable These 3 Windows Settings Now! (For Security)</a> by ThioJoe.<br>
+                    Applocker setup : <br>
+                    <a href="https://www.youtube.com/watch?v=qAoM6iJEVbY" target="_blank" class="nolink c_light_blue link_wh fs_bold">How to Virus-Proof Your Computer With Windows AppLocker (Ultimate Guide)</a> by ThioJoe.<br>
+                    TLS cypher and ECC curves : <br>
+                    <a href="https://learn.microsoft.com/en-us/windows-server/security/tls/manage-tls" target="_blank" class="nolink c_light_blue link_wh fs_bold">Manage Transport Layer Security (TLS)</a> by Microsoft, I recommend addingTLS_CHACHA20_POLY1305_SHA256 (but keep the other ones) as well as only using curve25519 as the NIST curves are known to be backdoored by the NSA.<br>
+                    IPsec key exchange : <br>
+                    <a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/configure-key-exchange-main-mode-settings" target="_blank" class="nolink c_light_blue link_wh fs_bold">Configure Key Exchange (Main Mode) Settings</a> by Microsoft, I recommend using SHA-387 AES-CBC 256 ECDH P-384.<br>
+                </p>
+                <h2>Browser hardening</h2>
+                <p>
+                    Remove edge : <br>
+                    <a href="https://www.tomsguide.com/how-to/how-to-uninstall-microsoft-edge" target="_blank" class="nolink c_light_blue link_wh fs_bold">permanently uninstall edge</a> by Tom's guide.<br>
+                    Advanced user.js config : <br>
+                    <a href="https://github.com/arkenfox" target="_blank" class="nolink c_light_blue link_wh fs_bold">Arkenfox</a> by<br>
+                    Introduction to firefox hardening : <br>
+                    <a href="https://gofoss.net/firefox/" target="_blank" class="nolink c_light_blue link_wh fs_bold">Hardened Firefox </a>by gofoss.net.<br>
+                    Advanced firefox hardening guide : <br>
+                    <a href="https://brainfucksec.github.io/firefox-hardening-guide#firefox-preferences" target="_blank" class="nolink c_light_blue link_wh fs_bold">Firefox Hardening Guide </a>by brainf+ck.<br>
+                </p>
+
+            
+    </main>
+    <footer class="header center nolist c_white">
+        <p>
+            Hosted on <a href="https://github.com/megamasterbloc/megamasterbloc.github.io" target="_blank" class="nolink c_light_blue link_wh fs_bold">Github pages</a>, copyright © 2023 megamasterbloc under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="nolink c_light_blue link_wh fs_bold">CC BY 4.0</a>, code under <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" class="nolink c_light_blue link_wh fs_bold">GNU GPL v3.0</a> license.
+        </p>
+    </footer>
+
+</body>
+</html>

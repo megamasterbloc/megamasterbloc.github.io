@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>megamasterbloc presentation</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
 </head>
 <body class="background">
     <!--header-->
     <header>
         <div class="header">
             <ul class="list_header center list_il">
-                <li><img src="/images/head.png" alt="head" class="logo left li_el"></li>
+                <li><img src="/media/head.png" alt="head" class="logo left li_el"></li>
                 <li><a href="/social" target="_blank" class="nolink c_white fs_main right li_el">socials</a></li>
                 <li><a href="index.html" class="nolink c_white fs_main right li_el">home</a></li>
                 <li><a href="/renders.html" class="nolink c_white fs_main li_el dp_ilb">megamasterbloc&nbsprenders</a></li>
@@ -23,7 +23,7 @@
     <!--main-->
     <div class="">
         <h3 class="center c_white">HWU logo</h3>
-        <a href="/images/HWU-MAX.png" target="_blank"><img src="/images/HWU_mini.png" alt="HWU logo" class="img"></a>
+        <a href="/media/HWU-MAX.png" target="_blank"><img src="/media/HWU_mini.png" alt="HWU logo" class="img"></a>
         <div class="div_main_text">
             <p>
             this is a render of the obsidian logo of <a href="https://discord.com/invite/highways" target="_blank" class="nolink c_blue fs_bold">HWU</a> (Highway Workers Union) on the server 2b2t. The render is over 100K chunks large and the resolution is 1:1, meaning that each pixel of the render represent a single bloc from the world. It is an isometric render with the max Y height at 121, you can actually see that near the highways since the rails are at y=121 while the floor is at y=120, thus not rendering the rails.
@@ -31,7 +31,7 @@
         </div>
         <!--<div class="div_main"-->
         <h3 class="center c_white">Test render</h3>
-        <a href="/images/main.png" target="_blank"><img src="/images/main.png" alt="test scene" class="img"></a>
+        <a href="/media/main.png" target="_blank"><img src="/media/main.png" alt="test scene" class="img"></a>
         <div class="div_main_text">
             <p>
                 This is a demonstration render that use most of the functionality of <a href="https://chunky-dev.github.io/docs/" target="_blank" class="nolink c_blue fs_bold" >Chunky</a>, the rendering software that I use. It is based on a test map and I have added a custom player model, including a custom skin. All of the features worked properly, for example the in-camera blur or the equirectangular projection mode.
@@ -39,21 +39,21 @@
         </div>
         <!--<div class="div_main">-->
         <h3 class="center c_white">Holycube season 5</h3>
-        <a href="/images/h5_lite.jpg" target="_blank"><img src="/images/h5_lite.jpg" alt="medieval city" class="img"></a>
+        <a href="/media/h5_lite.jpg" target="_blank"><img src="/media/h5_lite.jpg" alt="medieval city" class="img"></a>
         <div class="div_main_text">
             <p>
                 This is a render from a medieval town on the <a href="https://www.holycube.fr/" target="_blank" class="nolink c_blue link_wh fs_bold">holycube</a> server season 5. it was originaly made in 16k but had to be resized to 4k due to it's enormous size. The blurred background and foreground turned out to be very pretty and the very high ray count made it nearly noiseless.
             </p>
         </div>
         <h3 class="center c_white">Composite render</h3>
-        <a href="/images/terragen_extra_lite.jpg" target="_blank"><img src="/images/terragen_extra_lite.jpg" alt="top down view of a minecraft world" class="img"></a>
+        <a href="/media/terragen_extra_lite.jpg" target="_blank"><img src="/media/terragen_extra_lite.jpg" alt="top down view of a minecraft world" class="img"></a>
         <div class="div_main_text">
             <p>
                 One of the limitation of chunky is that it take a lot of RAM to render a large scene, both to load the 3D scene if there are a lot of chunks and to store the actual render when rendering at extremely large sizes. This is a limitation that all 3D softwares have and there have been a lot of optimisations developed specifically to address this issue. However Chunky is still a relatively small software and only a couple of them has been implemented, for example the awesome <a href="https://github.com/aTom3333/chunky-octree-plugin" target="_blank" class="nolink c_blue link_wh fs_bold">octree plugin</a> made by aTom3333. To bypass this limitation I am currently experimenting with a technique called <a href="https://en.wikipedia.org/wiki/Tiled_rendering" target="_blank" class="nolink c_blue link_wh fs_bold">tiled rendering</a> which consist of rendering only small portions of the final render at once. For my first attempt I've divided my final render into 4 quadrants and rendered each individually (which still took a lot of RAM), finally I used GIMP to put them together. It worked great for a first attempt but there is a lot of room for improvement, first there are some very visible artefacts at the junctions between the tiles due a lack of padding at the border of each of them, secondly the SPP was too low at 100 SPP (the bottom left one rendered at 16SPP due to another problem) which introduced some noise. It should be noted that the original render is 32768 by 32768 or approximately 1 gigapixel and had a size of 12 GB but it was so large that the only program that could open it was GIMP, it was then reduced to a size of 2048*2048 and is now much smaller.
             </p>
         </div>
         <h3 class="center c_white">Fives islands</h3>
-        <a href="/images/five_islands.png" target="_blank"><img src="/images/five_islands.png" alt="a big island with boats, towers and a big arch on top of it with a magma ball" class="img"></a>
+        <a href="/media/five_islands.png" target="_blank"><img src="/media/five_islands.png" alt="a big island with boats, towers and a big arch on top of it with a magma ball" class="img"></a>
         <div class="div_main_text">
             <p>
             The fives islands are a groups of player made structures on the minecraft server <a href="https://2b2t.miraheze.org/wiki/Front_Page" target="_blank" class="nolink c_blue link_wh fs_bold">2b2t</a>, the island featured on the render is the biggest island with a lot of details. For more informations on the history of this project you can watch <a href="https://www.youtube.com/watch?v=tilmZfu3tNQ" target="_blank" class="nolink c_blue link_wh fs_bold">the video FastVicent1 made about it</a>.
@@ -61,14 +61,14 @@
             </p>
         </div>
         <h3 class="center c_white">SkyMasons base</h3>
-        <a href="/images/SkyMasons.png" target="_blank"><img src="/images/SkyMasons.png" alt="a lot of floating islands with various builds on top of them" class="img"></a>
+        <a href="/media/SkyMasons.png" target="_blank"><img src="/media/SkyMasons.png" alt="a lot of floating islands with various builds on top of them" class="img"></a>
         <div class="div_main_text">
             <p>
             This is a render of the SkyMasons base, an enormous base founded by the <a href="https://2b2t.miraheze.org/wiki/SpawnMasons" target="_blank" class="nolink c_blue link_wh fs_bold">Spawn Masons</a>, a major 2b2t group, and built by various builders thanks to an ingenius proxy system. This allowed the base to survive for a very long without getting leaked because the players that were building couldn't know the true coordinates of the megabse. I made this render shortly after <a href="https://www.youtube.com/watch?v=UsN3qc-Vong" target="_blank" class="nolink c_blue link_wh fs_bold">SalC1 video about the base</a> and how it was founded, due to the size ands the shape of this base it was a good idea to make an isometric render and at the end it turned to be one of the best render I ever made.
             </p>
         </div>
         <h3 class="center c_white">minecraft classic server</h3>
-        <a href="/images/oldserver-1500.png" target="_blank"><img src="/images/oldserver-1500.png" alt="a top down view of a minecraft server" class="img"></a>
+        <a href="/media/oldserver-1500.png" target="_blank"><img src="/media/oldserver-1500.png" alt="a top down view of a minecraft server" class="img"></a>
         <div class="div_main_text">
             <p>
             The oldest memory I have from minecraft is <a href="https://www.deviantart.com/nova225/art/Minecraft-Server-060809-1-132891707" target="_blank" class="nolink c_blue link_wh fs_bold">this screenshot</a>, I don't know were I found it but I know for sure that it is thanks to this screenshot that I eventually started playing minecraft. A few months ago I rediscovered it while watching <a href="https://www.youtube.com/watch?v=8zcTx-oAL6g" target="_blank" class="nolink c_blue link_wh fs_bold">a youtube video</a> wich led me to try to recreate this screenshot in chunky, I even went so far to use a texture pack with the old bloc textures. The world itself is a very old minecraft server from the classic era, the screenshot says version 0.0.23a_01 wich came out in July 11, 2009.
