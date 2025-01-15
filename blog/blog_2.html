@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very low bitrate video compression using AV1</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+</head>
+<body class="nomargin nopadding home_background">
+    <header class="header">
+        <ul class="navbar list_header dp_il">
+            <li class="nolist left navbarel"><a href="/index.html" class=" nolink c_white li ">Home</a></li>
+            <li class="nolist left navbarel"><a href="/blog/blog_index.html"class=" nolink c_white">Blog</a></li>
+            <li class="nolist left navbarel"><a href="/renders.html" class=" nolink c_white ">Renders</a></li>
+          </ul> 
+    </header>
+    <main class="home_main_margin home_body_background c_white">
+            <br>
+            <br>
+            <h1 class="nomargin home_text_margin nopadding">Very low bitrate video compression using AV1</h1>
+           <div class="home_text_margin">
+                <p>
+                    In this article I'll demonstrate some of the video compression features of AV1 in the context of very low bitrate streaming, defined as any *video* stream with an average bitrate of less than 1 megabit per second.
+                <p>
+                <h2>Test footage : two edge cases</h2>
+                <p>
+                    In order to test the compression of AV1 I needed some test footage, for that I used an extrat from the WVFRM podcast in order to represent a low movement scene which could compress very well, I also captured a short clip in Apex Legends to represent a very high movement scene which would be harder to compress. While a low spacial-information scene could also compress well despite a high temporal-information, those scenes are only encountered in very specific settings which are not within the scope of this article. <br>
+                    It should be noted that your browser should support AV1 video playback in order to visualise the clips, otherwise you can probably download them and play them in an external software.
+
+                </p>
+                <h2>Very high motion scene</h2>
+                <p>
+                    I wanted to start with the hardest clip as it would be the one who would require the most work to look good.
+                    My first try was quite bad, it was just setting the bitrate to CBR 1000Kbps and using encoding speed 4, there is a lot of macroblocs visible and a lot of other artifacts.<br>
+                    <video width="720" height="480" controls>
+                        <source src="/media/apex first test.mp4" type="video/mp4">
+                    </video> 
+                    In my second test I tried scalling down the framerate from 120fps to 30fps along with reducing the encoding speed from 4 to 2, this made text and details a little clearer but there was still a lot of macroblocs and the viewing experience was even worse due to the lack of motion clarity. Interesingly, despite using CBR the filesize was less than half of the size of the previous test. <br>
+                    <video width="720" height="480" controls>
+                        <source src="/media/apex 30fps test.mp4" type="video/mp4">
+                    </video>
+                    For the second test I went back to 120fps but downscaled to 1280*720, as expected the video show less macroblocs but the reduced details and edge clarily makes for a smoother but less readable experience, depending on the purpose of the stream it may be worth trying, especially on smaller displays. <br>
+                    <video width="720" height="480" controls>
+                        <source src="/media/apex 720p test.mp4" type="video/mp4">
+                    </video>
+                </p>
+                <h2>a</h2>
+                <p>
+                    t3
+                </p>
+
+            
+    </main>
+    <footer class="header center nolist c_white">
+        <p>
+            Hosted on <a href="https://github.com/megamasterbloc/megamasterbloc.github.io" target="_blank" class="nolink c_light_blue link_wh fs_bold">Github pages</a>, copyright © 2023 megamasterbloc under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="nolink c_light_blue link_wh fs_bold">CC BY 4.0</a>, code under <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" class="nolink c_light_blue link_wh fs_bold">GNU GPL v3.0</a> license.
+        </p>
+    </footer>
+
+</body>
+</html>
